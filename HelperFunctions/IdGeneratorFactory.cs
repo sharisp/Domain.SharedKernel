@@ -4,15 +4,28 @@ namespace Domain.SharedKernel.HelperFunctions
 {
     public static class IdGeneratorFactory
     {
-        private static IdGenerator _generator;
+        private static IdGenerator? _generator;
+        private static readonly object _lock = new();
+        private static bool _initialized = false;
 
         public static void Initialize(int workerId)
         {
-            _generator = new IdGenerator(workerId);
+            lock (_lock)
+            {
+                if (_initialized) return; 
+
+                _generator = new IdGenerator(workerId);
+                _initialized = true;
+            }
         }
 
-        // private static readonly IdGenerator _generator = new IdGenerator(0);
+        public static long NewId()
+        {
+            if (_generator == null)
+                throw new InvalidOperationException("IdGeneratorFactory is not initialized. Call Initialize() first.");
 
-        public static long NewId() => _generator.CreateId();
+            return _generator.CreateId();
+        }
     }
+
 }

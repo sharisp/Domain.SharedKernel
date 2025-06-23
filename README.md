@@ -11,13 +11,13 @@ Install it from NuGet:
 ### .NET CLI
 
 ```bash
-dotnet add package Andrew.Domain.SharedKernel --version 1.0.0
+dotnet add package Andrew.Domain.SharedKernel
 ````
 
 ### Package Manager
 
 ```powershell
-NuGet\Install-Package Andrew.Domain.SharedKernel -Version 1.0.0
+NuGet\Install-Package Andrew.Domain.SharedKernel
 ```
 
 ---
