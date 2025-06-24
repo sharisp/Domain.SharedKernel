@@ -21,13 +21,13 @@ namespace Domain.SharedKernel.BaseEntity
 
         public long? DeleterUserId { get; set; }
 
+
         public void SoftDelete(ICurrentUser currentUser)
         {
-            this.IsDel= true;
-            this.DeleteDateTime=DateTimeOffset.Now;
+            this.IsDel = true;
+            this.DeleteDateTime = DateTimeOffset.Now;
             this.DeleterUserId = currentUser?.UserId;
         }
-
 
     }
 }

@@ -8,10 +8,14 @@ namespace Domain.SharedKernel.BaseEntity
     {
         public long Id { get; init; }
 
-        public BaseEntity()
+        protected BaseEntity()
         {
 
-            Id = IdGeneratorFactory.NewId();
+          
+        }
+        public BaseEntity(long? existingId = null)
+        {
+            Id = existingId ?? IdGeneratorFactory.NewId();
         }
 
         /// <summary>
