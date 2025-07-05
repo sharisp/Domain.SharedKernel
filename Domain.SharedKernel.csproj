@@ -15,7 +15,7 @@
   <IsPackable>true</IsPackable>
 
   <PackageId>Andrew.Domain.SharedKernel</PackageId>
-  <Version>1.1.3</Version>
+  <Version>1.1.4</Version>
   <Authors>Andrew Wang</Authors>
   <Company></Company>
    <Description>

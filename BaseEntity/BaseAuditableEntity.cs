@@ -13,7 +13,7 @@ namespace Domain.SharedKernel.BaseEntity
 
         public bool IsDel { get; set; }
 
-        public string? Descriptions { get; set; }
+        public string? Description { get; set; }
 
         public long? CreatorUserId { get; set; }
 
