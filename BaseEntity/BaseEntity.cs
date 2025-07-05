@@ -8,10 +8,9 @@ namespace Domain.SharedKernel.BaseEntity
     {
         public long Id { get; init; }
 
-        protected BaseEntity()
-        {
 
-          
+        private BaseEntity()
+        {
         }
         public BaseEntity(long? existingId = null)
         {
