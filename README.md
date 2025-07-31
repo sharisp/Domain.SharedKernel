@@ -59,6 +59,7 @@ A utility class for secure hash generation:
 
 * `SHA256`
 * `MD5`
+* `AES`
 
 Useful for token generation, password hashing, and more.
 
