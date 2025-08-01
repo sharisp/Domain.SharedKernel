@@ -18,7 +18,7 @@ namespace Domain.SharedKernel.BaseEntity
         }
 
         /// <summary>
-        /// 领域事件
+        /// domain events
         /// </summary>
 
         [NotMapped]
