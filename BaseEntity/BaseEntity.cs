@@ -12,6 +12,10 @@ namespace Domain.SharedKernel.BaseEntity
         private BaseEntity()
         {
         }
+        /// <summary>
+        /// long? existingId  supports both new entities and existing entities.
+        /// </summary>
+        /// <param name="existingId"></param>
         public BaseEntity(long? existingId = null)
         {
             Id = existingId ?? IdGeneratorFactory.NewId();
