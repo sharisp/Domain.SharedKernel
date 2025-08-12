@@ -1,8 +1,4 @@
-using Common.Jwt;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-
-namespace JwtUnitTest
+namespace UnitTest
 {
     [TestClass]
     public class UnitTest1
