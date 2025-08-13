@@ -11,7 +11,7 @@ namespace UnitTest
     {
         private ServiceProvider _serviceProvider;
 
-      //  private AuthenticationTokenResponse authenticationTokenResponse;
+        //  private AuthenticationTokenResponse authenticationTokenResponse;
         [TestInitialize] // run before each test
         public void Setup()
         {
@@ -20,7 +20,7 @@ namespace UnitTest
                 .AddJsonFile("appsettings.json")
                 .Build());
             _serviceProvider = services.BuildServiceProvider();
-           // authenticationTokenResponse = _serviceProvider.GetService<AuthenticationTokenResponse>();
+            // authenticationTokenResponse = _serviceProvider.GetService<AuthenticationTokenResponse>();
 
         }
 
@@ -38,7 +38,7 @@ namespace UnitTest
         public void Test1()
         {
             IdGeneratorFactory.Initialize(1);
-            var newID=  IdGeneratorFactory.NewId();          
+            var newID = IdGeneratorFactory.NewId();
             Assert.IsTrue(newID > 0, "newID should have value");
         }
 
@@ -47,6 +47,15 @@ namespace UnitTest
         {
             var newID = IdGeneratorFactory.NewId();
             Assert.IsTrue(newID > 0, "newID should have value");
+        }
+
+        [TestMethod]
+        public void TestMd5()
+        {
+            var md5Str = HashHelper.ComputeMd5Hash("test string");
+            Assert.IsNotNull(md5Str, "Hash should not be null");
+
+            Assert.IsTrue(md5Str.Length > 0, "Hash length should be greater than 0");
         }
     }
 }
