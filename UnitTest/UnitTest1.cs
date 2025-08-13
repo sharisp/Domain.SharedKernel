@@ -57,5 +57,14 @@ namespace UnitTest
 
             Assert.IsTrue(md5Str.Length > 0, "Hash length should be greater than 0");
         }
+
+        [TestMethod]
+        public void TestSha256()
+        {
+            var str = HashHelper.ComputeSha256Hash("test string");
+            Assert.IsNotNull(str, "Hash should not be null");
+
+            Assert.IsTrue(str.Length > 0, "Hash length should be greater than 0");
+        }
     }
 }
