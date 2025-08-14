@@ -76,5 +76,17 @@ namespace UnitTest
 
             Assert.IsTrue(str.Length > 0, "Hash length should be greater than 0");
         }
+        [TestMethod]
+        public void TestDecodeAES()
+        {
+            var originalStr = "test string";
+            var aesStr = HashHelper.AESEncrypt(originalStr, "1111111111111111", "1111111111111111");
+            Assert.IsNotNull(aesStr, "Hash should not be null");
+
+            Assert.IsTrue(aesStr.Length > 0, "Hash length should be greater than 0");
+            var decodedStr = HashHelper.AESDecrypt(aesStr, "1111111111111111", "1111111111111111");
+            Assert.IsNotNull(decodedStr, "Decoded string should not be null");
+            Assert.AreEqual(decodedStr, originalStr);
+        }
     }
 }
