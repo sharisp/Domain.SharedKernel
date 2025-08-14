@@ -1,4 +1,5 @@
 using Domain.SharedKernel;
+using Domain.SharedKernel.BaseEntity;
 using Domain.SharedKernel.HelperFunctions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -87,6 +88,12 @@ namespace UnitTest
             var decodedStr = HashHelper.AESDecrypt(aesStr, "1111111111111111", "1111111111111111");
             Assert.IsNotNull(decodedStr, "Decoded string should not be null");
             Assert.AreEqual(decodedStr, originalStr);
+        }
+        [TestMethod]
+        public void TestBaseEntityIdNull()
+        {
+           var baseEntity = new BaseEntity();
+            Assert.IsNotNull(baseEntity.Id, "baseEntity.Id should not be null");         
         }
     }
 }
