@@ -95,5 +95,12 @@ namespace UnitTest
            var baseEntity = new BaseEntity();
             Assert.IsNotNull(baseEntity.Id, "baseEntity.Id should not be null");         
         }
+        [TestMethod]
+        public void TestBaseEntityIdWithVal()
+        {
+            var baseEntity = new BaseEntity(11);
+            Assert.IsNotNull(baseEntity.Id, "baseEntity.Id should not be null");
+            Assert.AreEqual(baseEntity.Id, 11);
+        }
     }
 }
