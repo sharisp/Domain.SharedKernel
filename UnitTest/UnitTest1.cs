@@ -57,6 +57,7 @@ namespace UnitTest
             Assert.IsNotNull(md5Str, "Hash should not be null");
 
             Assert.IsTrue(md5Str.Length > 0, "Hash length should be greater than 0");
+            Assert.AreEqual(md5Str, "6f8db599de986fab7a21625b7916589c", "MD5 hash of 'test string' should match expected value");
         }
 
         [TestMethod]
