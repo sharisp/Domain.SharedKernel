@@ -36,7 +36,7 @@ namespace UnitTest
 
 
         [TestMethod]
-        public void Test1()
+        public void TestSnowFlakeIdWithInit()
         {
             IdGeneratorFactory.Initialize(1);
             var newID = IdGeneratorFactory.NewId();
