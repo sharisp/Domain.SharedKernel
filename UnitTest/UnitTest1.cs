@@ -44,7 +44,7 @@ namespace UnitTest
         }
 
         [TestMethod]
-        public void Test2()
+        public void TestSnowFlakeId()
         {
             var newID = IdGeneratorFactory.NewId();
             Assert.IsTrue(newID > 0, "newID should have value");
