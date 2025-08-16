@@ -4,6 +4,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Domain.SharedKernel.BaseEntity
 {
+    /// <summary>
+    /// BaseEntity is the base class for all entities in the domain layer.
+    /// </summary>
     public class BaseEntity
     {
         public long Id { get; init; }
