@@ -9,6 +9,9 @@ namespace Domain.SharedKernel.BaseEntity
     /// </summary>
     public class BaseEntity
     {
+        /// <summary>
+        /// Id is the unique identifier for the entity.using IdGen for distributed systems.
+        /// </summary>
         public long Id { get; init; }
 
 
