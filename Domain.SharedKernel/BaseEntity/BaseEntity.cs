@@ -33,7 +33,10 @@ namespace Domain.SharedKernel.BaseEntity
 
         [NotMapped]
         private readonly List<INotification> events = new();
-
+        /// <summary>
+        /// add domain event to the entity.
+        /// </summary>
+        /// <param name="eventItem"></param>
         public void AddDomainEvent(INotification eventItem)
         {
             events.Add(eventItem);
