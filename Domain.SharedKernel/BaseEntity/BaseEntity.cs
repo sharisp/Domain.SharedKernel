@@ -53,6 +53,10 @@ namespace Domain.SharedKernel.BaseEntity
             }
 
         }
+        /// <summary>
+        /// GetDomainEvents returns the list of domain events for the entity.
+        /// </summary>
+        /// <returns></returns>
         public List<INotification> GetDomainEvents()
         {
             return events;
