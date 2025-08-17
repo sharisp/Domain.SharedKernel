@@ -41,6 +41,10 @@ namespace Domain.SharedKernel.BaseEntity
         {
             events.Add(eventItem);
         }
+        /// <summary>
+        /// add domain event to the entity if it does not already exist.
+        /// </summary>
+        /// <param name="eventItem"></param>
         public void AddIfNotExists(INotification eventItem)
         {
             if (!events.Contains(eventItem))
