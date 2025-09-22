@@ -2,7 +2,7 @@
 
 namespace Domain.SharedKernel.BaseEntity
 {
-    public abstract class BaseAuditableEntity : BaseEntity
+    public abstract class BaseAuditableEntity : BaseEntity,ICreatorUserId, ISoftDelete
     {
 
         public DateTimeOffset? CreateDateTime { get; set; }
