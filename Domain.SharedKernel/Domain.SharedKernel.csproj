@@ -15,7 +15,7 @@
   <IsPackable>true</IsPackable>
 
   <PackageId>Andrew.Domain.SharedKernel</PackageId>
-  <Version>1.1.6</Version>
+  <Version>1.1.7</Version>
   <Authors>Andrew Wang</Authors>
   <Company></Company>
    <Description>
@@ -33,6 +33,9 @@
   <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder> 
   <PackageReadmeFile>README.md</PackageReadmeFile> 
 </PropertyGroup>
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="" />
+  </ItemGroup>
 
 <!-- You need to explicitly include the README.md file if you use <PackageReadmeFile>.
      Place this <ItemGroup> outside the <PropertyGroup>, but still within the <Project> tags. -->
